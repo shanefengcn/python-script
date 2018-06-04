@@ -1,1 +1,1 @@
-# python-script
+# Python脚本
