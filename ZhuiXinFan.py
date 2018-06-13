@@ -3,6 +3,8 @@
 
 # Thanks: CodesW(https://www.cnblogs.com/tp1226/p/8419564.html)
 
+# 2018/06/13 - fix no link bug
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -30,21 +32,29 @@ with requests.Session() as session:
         emule.append(emule_url.get_text())
 
         baidu_text = soup.find(text='网盘下载1')
-        baidu_parent = baidu_text.parent
-        baidu.append(baidu_parent.get('href'))
+        if baidu_text != None:
+            baidu_parent = baidu_text.parent
+            baidu.append(baidu_parent.get('href'))
 
         weiyun_text = soup.find(text='网盘下载2')
-        weiyun_parent = weiyun_text.parent
-        weiyun.append(weiyun_parent.get('href'))
+        if weiyun_text != None:
+            weiyun_parent = weiyun_text.parent
+            weiyun.append(weiyun_parent.get('href'))
 
 print('ed2k:')
 for i in range(len(emule)):
     print(emule[i])
 
-print('百度云:')
-for j in range(len(baidu)):
-    print(baidu[j])
+if baidu == []:
+    print('无百度云链接')
+else:
+    print('百度云:')
+    for j in range(len(baidu)):
+        print(baidu[j])
 
-print('微云:')
-for k in range(len(weiyun)):
-    print(weiyun[k])
+if weiyun == []:
+    print('无微云链接')
+else:
+    print('微云:')
+    for k in range(len(weiyun)):
+        print(weiyun[k])
