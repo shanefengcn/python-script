@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
 
-# 2018/06/13 - fix no link bug
-
 import requests
 from bs4 import BeautifulSoup
 

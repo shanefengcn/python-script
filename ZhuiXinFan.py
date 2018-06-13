@@ -3,8 +3,6 @@
 
 # Thanks: CodesW(https://www.cnblogs.com/tp1226/p/8419564.html)
 
-# 2018/06/13 - fix no link bug
-
 import requests
 from bs4 import BeautifulSoup
 
