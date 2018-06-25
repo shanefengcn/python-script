@@ -2,6 +2,7 @@
 
 ## 2018/06/25
 * OnePlus Update: Move 'Mobile' to ini
+
 ## 2018/06/21
 * OnePlus Update: Upload
 
