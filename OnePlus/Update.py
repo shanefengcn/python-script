@@ -79,3 +79,5 @@ else:
     print('Update alpha version: HTTP', response_W.status_code)
 
 config.write(open('Update.ini', 'r+'))
+
+input('Press ENTER to exit…')
