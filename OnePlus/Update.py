@@ -80,4 +80,4 @@ else:
 
 config.write(open('Update.ini', 'r+'))
 
-input('Press ENTER to exit…')
+input('Press ENTER to exit …')
