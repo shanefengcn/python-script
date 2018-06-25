@@ -53,3 +53,5 @@ else:
     print('ed2k:')
     for k in range(len(emule)):
         print(emule[k])
+
+input('Press ENTER to exit …')

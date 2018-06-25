@@ -56,3 +56,5 @@ else:
     print('微云:')
     for k in range(len(weiyun)):
         print(weiyun[k])
+
+input('Press ENTER to exit …')
