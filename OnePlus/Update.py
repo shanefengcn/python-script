@@ -51,7 +51,7 @@ else:
 if response_X.status_code == 200:
     json_X = json.loads(response_X.text, object_hook=JSONObject)
     new_version_X = json_X.new_version
-    extract_X = json_A.extract
+    extract_X = json_X.extract
     extract_X = extract_X.replace('\\\n', '')
     download_X = json_X.down_url
     print('new beta version:', new_version_X)
@@ -66,7 +66,7 @@ else:
 if response_W.status_code == 200:
     json_W = json.loads(response_W.text, object_hook=JSONObject)
     new_version_W = json_W.new_version
-    extract_W = json_A.extract
+    extract_W = json_W.extract
     extract_W = extract_W.replace('\\\n', '')
     download_W = json_W.down_url
     print('new alpha version:', new_version_W)
