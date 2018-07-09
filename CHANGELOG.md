@@ -1,5 +1,8 @@
 # Changelog
 
+## 2018/07/09
+* OnePlus Update: fix bug
+
 ## 2018/06/25
 * OnePlus Update: Move 'Mobile' to ini
 
