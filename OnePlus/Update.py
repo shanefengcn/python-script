@@ -37,7 +37,10 @@ if response_A.status_code == 200:
     json_A = json.loads(response_A.text, object_hook=JSONObject)
     new_version_A = json_A.new_version
     extract_A = json_A.extract
+    extract_A = extract_A.replace('\\\\\n', '')
+    extract_A = extract_A.replace('\\\\n', '')
     extract_A = extract_A.replace('\\\n', '')
+    extract_A = extract_A.replace('\\n', '')
     download_A = json_A.down_url
     print('new stable version:', new_version_A)
     print(extract_A)
@@ -52,7 +55,10 @@ if response_X.status_code == 200:
     json_X = json.loads(response_X.text, object_hook=JSONObject)
     new_version_X = json_X.new_version
     extract_X = json_X.extract
+    extract_X = extract_X.replace('\\\\\n', '')
+    extract_X = extract_X.replace('\\\\n', '')
     extract_X = extract_X.replace('\\\n', '')
+    extract_X = extract_X.replace('\\n', '')
     download_X = json_X.down_url
     print('new beta version:', new_version_X)
     print(extract_X)
@@ -67,7 +73,10 @@ if response_W.status_code == 200:
     json_W = json.loads(response_W.text, object_hook=JSONObject)
     new_version_W = json_W.new_version
     extract_W = json_W.extract
+    extract_W = extract_W.replace('\\\\\n', '')
+    extract_W = extract_W.replace('\\\\n', '')
     extract_W = extract_W.replace('\\\n', '')
+    extract_W = extract_W.replace('\\n', '')
     download_W = json_W.down_url
     print('new alpha version:', new_version_W)
     print(extract_W)
