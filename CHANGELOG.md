@@ -1,5 +1,8 @@
 # Changelog
 
+## 2018/07/10
+* OnePlus Update: fix bug
+
 ## 2018/07/09
 * OnePlus Update: fix bug
 
