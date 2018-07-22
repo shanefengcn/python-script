@@ -29,9 +29,9 @@ body_X = {'version': '1', 'mobile': mobile, 'ota_version': version_x, 'imei': im
           'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
 body_W = {'version': '1', 'mobile': mobile, 'ota_version': version_w, 'imei': imei,
           'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
-response_A = requests.post(url, json=body_A, headers=headers, timeout=5)
-response_X = requests.post(url, json=body_X, headers=headers, timeout=5)
-response_W = requests.post(url, json=body_W, headers=headers, timeout=5)
+response_A = requests.post(url, json=body_A, headers=headers, timeout=60)
+response_X = requests.post(url, json=body_X, headers=headers, timeout=60)
+response_W = requests.post(url, json=body_W, headers=headers, timeout=60)
 
 if response_A.status_code == 200:
     json_A = json.loads(response_A.text, object_hook=JSONObject)
