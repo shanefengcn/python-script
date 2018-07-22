@@ -1,5 +1,8 @@
 # Changelog
 
+## 2018/07/22
+* OnePlus Update: Edit timeout
+
 ## 2018/07/10
 * OnePlus Update: fix bug
 
