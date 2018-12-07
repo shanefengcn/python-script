@@ -47,14 +47,14 @@ if baidu == []:
     print('无百度云链接')
 else:
     print('百度云:')
-    for j in range(len(baidu)):
-        print(baidu[j])
+    for i in range(len(baidu)):
+        print(baidu[i])
 
 if weiyun == []:
     print('无微云链接')
 else:
     print('微云:')
-    for k in range(len(weiyun)):
-        print(weiyun[k])
+    for i in range(len(weiyun)):
+        print(weiyun[i])
 
 input('Press ENTER to exit …')

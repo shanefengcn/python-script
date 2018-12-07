@@ -30,14 +30,14 @@ with requests.Session() as session:
     
     magnet_text = soup.find_all(text='磁力下载')
     if magnet_text != None:
-        for j in range(len(magnet_text)):
-            magnet_parent = magnet_text[j].parent
+        for i in range(len(magnet_text)):
+            magnet_parent = magnet_text[i].parent
             magnet.append(magnet_parent.get('href'))
 
     emule_text = soup.find_all(text='电驴下载')
     if emule_text != None:
-        for k in range(len(emule_text)):
-            emule_parent = emule_text[k].parent
+        for i in range(len(emule_text)):
+            emule_parent = emule_text[i].parent
             emule.append(emule_parent.get('href'))
 
 if baidu == []:
@@ -58,14 +58,14 @@ if magnet == []:
     print('无磁力链')
 else:
     print('磁力链:')
-    for j in range(len(magnet)):
-        print(magnet[j])
+    for i in range(len(magnet)):
+        print(magnet[i])
 
 if emule == []:
     print('无ed2k链接')
 else:
     print('ed2k:')
-    for k in range(len(emule)):
-        print(emule[k])
+    for i in range(len(emule)):
+        print(emule[i])
 
 input('Press ENTER to exit …')
