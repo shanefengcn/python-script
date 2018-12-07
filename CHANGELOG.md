@@ -1,5 +1,8 @@
 # Changelog
 
+## 2018/12/07
+* fixsub: add 青铜网盘
+
 ## 2018/07/22
 * OnePlus Update: Edit timeout
 
