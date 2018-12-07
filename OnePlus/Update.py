@@ -46,6 +46,7 @@ if response_A.status_code == 200:
     print(extract_A)
     print(download_A)
     config['Version']['version_a'] = new_version_A
+    config['Version']['url_a'] = download_A
 elif response_A.status_code == 304:
     print('no new stable version')
 else:
@@ -64,6 +65,7 @@ if response_X.status_code == 200:
     print(extract_X)
     print(download_X)
     config['Version']['version_x'] = new_version_X
+    config['Version']['url_x'] = download_X
 elif response_X.status_code == 304:
     print('no new beta version')
 else:
@@ -82,6 +84,7 @@ if response_W.status_code == 200:
     print(extract_W)
     print(download_W)
     config['Version']['version_w'] = new_version_W
+    config['Version']['url_w'] = download_W
 elif response_W.status_code == 304:
     print('no new alpha version')
 else:
