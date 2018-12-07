@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import requests
+import lxml
 from bs4 import BeautifulSoup
 
 baidu = []

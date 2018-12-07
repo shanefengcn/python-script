@@ -4,6 +4,7 @@
 # Thanks: CodesW(https://www.cnblogs.com/tp1226/p/8419564.html)
 
 import requests
+import lxml
 from bs4 import BeautifulSoup
 
 domain = 'http://www.zhuixinfan.com/'
