@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 baidu = []
+qingt = []
 magnet = []
 emule = []
 
@@ -21,6 +22,12 @@ with requests.Session() as session:
             baidu_parent = baidu_text[i].parent
             baidu.append(baidu_parent.get('href'))
 
+    qingt_text = soup.find_all(text='青铜网盘')
+    if qingt_text != None:
+        for i in range(len(qingt_text)):
+            qingt_parent = qingt_text[i].parent
+            qingt.append(qingt_parent.get('href'))
+    
     magnet_text = soup.find_all(text='磁力下载')
     if magnet_text != None:
         for j in range(len(magnet_text)):
@@ -39,6 +46,13 @@ else:
     print('百度云:')
     for i in range(len(baidu)):
         print(baidu[i])
+
+if qingt == []:
+    print('无青铜链接')
+else:
+    print('青铜:')
+    for i in range(len(qingt)):
+        print(qingt[i])
 
 if magnet == []:
     print('无磁力链')
