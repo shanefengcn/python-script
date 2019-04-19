@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019/04/19
+* ZhuiXinFan: fix bug
+* OnePlus Update: fix bug
+* MKVtoMP4: Upload
+* VIDEOtoMKV: Upload
+
 ## 2018/12/07
 * fixsub: add 青铜网盘 & fix bug
 * ZhuiXinFan: fix bug
