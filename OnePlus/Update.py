@@ -3,7 +3,7 @@
 
 import configparser
 import json
-
+import os
 import requests
 
 
@@ -12,8 +12,10 @@ class JSONObject:
         self.__dict__ = d
 
 
+curpath = os.path.dirname(os.path.realpath(__file__))
+cfgpath = os.path.join(curpath, 'Update.ini')
 config = configparser.ConfigParser()
-config.read('Update.ini')
+config.read(cfgpath, encoding='utf-8')
 mobile = config['Default']['mobile']
 imei = config['Default']['imei']
 version_a = config['Version']['version_a']
@@ -23,12 +25,9 @@ version_w = config['Version']['version_w']
 url = 'http://otag.h2os.com/post/Query_Update'
 headers = {'User-Agent': 'com.oneplus.opbackup/1.4.0.171219144846.50044e6',
            'Content-Type': 'application/json'}
-body_A = {'version': '1', 'mobile': mobile, 'ota_version': version_a, 'imei': imei,
-          'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
-body_X = {'version': '1', 'mobile': mobile, 'ota_version': version_x, 'imei': imei,
-          'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
-body_W = {'version': '1', 'mobile': mobile, 'ota_version': version_w, 'imei': imei,
-          'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
+body_A = {'version': '1', 'mobile': mobile, 'ota_version': version_a, 'imei': imei, 'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
+body_X = {'version': '1', 'mobile': mobile, 'ota_version': version_x, 'imei': imei, 'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
+body_W = {'version': '1', 'mobile': mobile, 'ota_version': version_w, 'imei': imei, 'mode': '0', 'type': '1', 'language': 'zh-CN', 'beta': '0', 'isOnePlus': '1'}
 response_A = requests.post(url, json=body_A, headers=headers, timeout=60)
 response_X = requests.post(url, json=body_X, headers=headers, timeout=60)
 response_W = requests.post(url, json=body_W, headers=headers, timeout=60)
@@ -90,6 +89,6 @@ elif response_W.status_code == 304:
 else:
     print('Update alpha version: HTTP', response_W.status_code)
 
-config.write(open('Update.ini', 'r+'))
+config.write(open(cfgpath, 'r+'))
 
 input('Press ENTER to exit …')

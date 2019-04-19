@@ -12,7 +12,8 @@ emule = []
 baidu = []
 weiyun = []
 
-tv_url = input('请输入剧集地址\n格式为: http://www.zhuixinfan.com/viewtvplay-[数字].html\n')
+tv_urldata = input('请输入剧集地址中的数字\n格式为: http://www.zhuixinfan.com/viewtvplay-[数字].html\n')
+tv_url = 'http://www.zhuixinfan.com/viewtvplay-'+ tv_urldata +'.html'
 
 with requests.Session() as session:
     resp = session.get(tv_url, timeout=10)
